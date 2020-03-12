@@ -1,0 +1,70 @@
+{
+    "name": "webpack-wfp",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "build": "webpack",
+        "dev": "webpack-dev-server --config webpack.config.js --mode development --progress --colors --watch",
+        "test": "jest"
+    },
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "@babel/cli": "^7.7.7",
+        "@babel/core": "^7.7.7",
+        "@babel/plugin-proposal-decorators": "^7.8.3",
+        "@babel/preset-env": "^7.7.7",
+        "@types/react": "^16.9.19",
+        "@types/react-dom": "^16.9.5",
+        "babel-loader": "^8.0.6",
+        "jest": "^25.1.0",
+        "source-map-loader": "^0.2.4",
+        "ts-loader": "^6.2.1",
+        "typescript": "^3.7.5",
+        "webpack": "^4.41.5",
+        "webpack-cli": "^3.3.10"
+    },
+    "dependencies": {
+        "@babel/plugin-proposal-class-properties": "^7.8.3",
+        "@babel/plugin-transform-runtime": "^7.8.3",
+        "@babel/polyfill": "^7.7.0",
+        "@babel/preset-react": "^7.8.3",
+        "@babel/preset-typescript": "^7.8.3",
+        "@babel/runtime": "^7.8.4",
+        "babel-jest": "^25.1.0",
+        "core-decorators": "^0.20.0",
+        "eslint": "5.9.0",
+        "eslint-config-standard": "12.0.0",
+        "eslint-plugin-import": "2.14.0",
+        "eslint-plugin-jest": "^23.7.0",
+        "eslint-plugin-node": "8.0.0",
+        "eslint-plugin-promise": "4.0.1",
+        "eslint-plugin-standard": "4.0.0",
+        "html-webpack-plugin": "^3.2.0",
+        "jquery": "^3.4.1",
+        "prop-types": "^15.7.2",
+        "react": "^16.12.0",
+        "react-dom": "^16.12.0",
+        "react-hot-loader": "^4.12.19",
+        "regenerator-runtime": "^0.13.3",
+        "snabbdom": "^0.7.4",
+        "webpack-dev-server": "^3.10.2"
+    },
+    "directories": {
+        "test": "test"
+    },
+    "browserslist": [
+        "last 1 version",
+        "> 90%",
+        "IE 10"
+    ],
+    "plugins": [
+        [
+            "@babel/plugin-proposal-decorators",
+            {
+                "legacy": true
+            }
+        ]
+    ]
+}

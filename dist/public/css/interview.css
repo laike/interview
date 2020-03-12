@@ -1,0 +1,74 @@
+body {
+    background-color: aliceblue;
+}
+
+
+/* 
+波纹实现方法一
+.wave {
+    margin: 0 auto;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    background: #06c no-repeat center center;
+    background-size: 100%;
+    animation: wave 4s linear infinite;
+}
+
+@keyframes wave {
+    0% {
+        box-shadow: 0 0 0 0 rgba(245, 226, 226, 1), 0 0 0 0 rgba(250, 189, 189, 1);
+    }
+    50% {
+        box-shadow: 0 0 0 20px rgba(245, 226, 226, .5), 0 0 0 0 rgba(250, 189, 189, 1);
+    }
+    100% {
+        box-shadow: 0 0 0 40px rgba(245, 226, 226, 0), 0 0 0 20px rgba(250, 226, 226, 0);
+    }
+} */
+
+
+/*波纹实现方法2使用before after*/
+
+.wave {
+    margin: 0 auto;
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #06c;
+    overflow: hidden;
+}
+
+.wave::before,
+.wave::after {
+    content: '';
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    z-index: 10;
+    border-radius: 45%;
+    background-color: rgba(255, 255, 255, .4);
+}
+
+.wave::before {
+    transform: translate(-50%, -70%) rotate(0);
+    animation: rotate 6s linear;
+}
+
+.wave::after {
+    transform: translate(-50%, -70%) rotate(0);
+    border-radius: 47%;
+    animation: rotate 6s linear;
+}
+
+@keyframes rotate {
+    50% {
+        transform: translate(-50%, -73%) rotate(180deg);
+    }
+    100% {
+        transform: translate(-50%, -73%) rotate(360deg);
+    }
+}
